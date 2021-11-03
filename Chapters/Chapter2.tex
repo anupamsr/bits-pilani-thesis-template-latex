@@ -1,0 +1,37 @@
+% Chapter 1
+
+\chapter{Requirements and Estimates} % Main chapter title
+
+\label{Chapter2} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+\lhead{Chapter 2. \emph{Requirement Gathering}} % This is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+
+Following requirements were captured for our full system:
+
+\section{Requirements}
+\subsection{Functional requirements}
+\begin{itemize}
+	\item System should be able to download the data from Refinitiv's remote servers.
+	\item System should be able to provide this data to different trading teams with equal priority.
+	\item System should be able to store this data for later retrieval.
+	\item System should make it easy to query this data.
+\end{itemize}
+
+\subsection{Non-functional requirements}
+\begin{itemize}
+	\item System should be highly reliable. A unreliable system will lose the realtime feed being published by remote server.
+	\item System should be consistent. The real time feed must be delivered in the same order as it was received.
+	\item System should be moniterable.
+	\item System should raise alerts upon failure.
+\end{itemize}
+
+\section{Estimates}
+Refinitiv publishes around 3 to 5 MB per seconds of data, but occasionally the rate of delivery may rise upto 50 MB per seconds. Also, since the data is also published in archived format at the end of the day, we were able to estimate average storage requirement, which was around 1 GB per day.
+
+A always-on system downloading 1GB per day will require ~365 GB for a year's worth of data. Since we also backfilled the data for last 3 years, 1 TB of storage was estimated to be required. To make sure our system remains stable for next 3 years also, 2 TB of storage will be required. Furthermore, we estimate that a 60\% full disk should raise an alert, a minimum of 3.5 TB of disk will be required.
+
+
+
+%----------------------------------------------------------------------------------------

@@ -42,7 +42,7 @@
   \@tfor\@this:=#2\do{
     \@expandtwoargs\in@{,\@this,}{,\@curroptions,}
     \ifin@ \@tempswatrue \@break@tfor \fi}
-  \let\@this\@empty
+  \let\@this\@empty 
   \if@tempswa \else \PassOptionsToClass{#1}{\baseclass}\fi
 }
 \@checkoptions{11pt}{{10pt}{11pt}{12pt}}
@@ -84,6 +84,10 @@
                {   9pt}  % foot height
                { 0.3in}  % foot sep
 %-------------------------------------------------------------------------------
+% Custom packages for Sankalp Thesis
+\usepackage{algorithm}
+\usepackage{algorithmic}
+% ----------------------------------------
 
 %-------------------------------------------------------------------------------
 % DECLARATION OF AUTHORSHIP
@@ -147,7 +151,7 @@ This is to certify that the thesis entitled, ``\emph{\ttitle}'' and submitted by
 \underline{\authornames} ID No. \underline{\idnum} in partial fulfillment of the
 requirements of \ccode{} \cname{} embodies the work done by him under my
 supervision.\\[2.5cm]
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.65\textwidth}
     \begin{flushleft} \large
         \vspace{2cm}
         \rule[0.5em]{13em}{0.5pt}\\
@@ -158,7 +162,7 @@ supervision.\\[2.5cm]
         Date:\\
     \end{flushleft}
 \end{minipage}
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.65\textwidth}
     \begin{flushleft} \large
         \vspace{2cm}
         \rule[0.5em]{13em}{0.5pt}\\
@@ -271,7 +275,7 @@ supervision.\\[2.5cm]
         stringstyle=\color[rgb]{0.7,0,0} }
 \usepackage[pdfpagemode={UseOutlines},bookmarks=true,bookmarksopen=true,
    bookmarksopenlevel=0,bookmarksnumbered=true,hypertexnames=false,
-   colorlinks,linkcolor={blue},citecolor={red},urlcolor={black},
+   colorlinks,linkcolor={blue},citecolor={red},urlcolor={blue},
    pdfstartview={FitV},unicode,breaklinks=true]{hyperref}
 
 \usepackage[toc]{glossaries}
@@ -399,8 +403,8 @@ supervision.\\[2.5cm]
 \newenvironment{acknowledgements}
 {
     \btypeout{Acknowledgements}
-    \addtotoc{Acknowledgements}
-    \addtocontents{toc}{\vspace{1em}}
+    % \addtotoc{Acknowledgements}
+    % \addtocontents{toc}{\vspace{1em}}
     \setstretch{1.3}
     \thispagestyle{plain}
     \begin{center}{\huge{\textit{Acknowledgements}} \par}\end{center}
@@ -434,8 +438,8 @@ supervision.\\[2.5cm]
 \addcontentsline{toc}{chapter}{#1}}
 \renewcommand\tableofcontents{
 \btypeout{Table of Contents}
-\addtotoc{Contents}
-\begin{spacing}{1}{
+% \addtotoc{Contents}
+\begin{spacing}{2}{
     \setlength{\parskip}{1pt}
     \if@twocolumn
       \@restonecoltrue\onecolumn

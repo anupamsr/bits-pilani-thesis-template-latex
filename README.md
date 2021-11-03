@@ -1,20 +1,10 @@
 BITS Pilani Reports LaTeX Template
 =======================
 
-A template and style file for generating reports in LaTeX. It is designed keeping a BITSian's thesis in mind but can be extended by anyone to adapt to the needs of the respective university reports (project reports, PhD Thesis, etc).
+Thesis submitted as part of the course _BITSZG628T_ offered by the BITS Pilani WILP Software Systems program.
 
-The title page looks like this -
-
-![BITS Pilani Thesis](demo.png "Thesis Title Page")
-
-
-Improvements -
-
-- The BITS Logo is now vectorized (taken from the BITS Branding Styleguide)
-- The template design (configured in ```Thesis.cls```) adheres to the required thesis design for 2016 (according to the official handout)
-- Support for ```biblatex``` instead of the existing ```natbib``` for added functionality
-
-BITS Pilani, Pilani Campus Thesis template
+----
+This thesis builds upon the BITS Pilani, Pilani Campus Thesis template
 By - Siddhant Shrivastava
 
 This thesis builds upon the BITS Pilani Thesis Class from Darshit Shah -
